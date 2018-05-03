@@ -1,5 +1,5 @@
 ### Tasks: 
-- [ ] Write a code to find the bearing between 2 coordinare points
+- [x] Write a code to find the bearing between 2 coordinare points
 - [ ] Implement that as True/False
 - [ ] Translate the True/False into Right/Left
 - [ ] Implement the compas into the code when it is ready
