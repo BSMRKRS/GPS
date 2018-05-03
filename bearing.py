@@ -21,7 +21,7 @@ def calculate_initial_compass_bearing(pointA, pointB):
 
     return compass_bearing
 
-tup1 = (44.979379, -93.284811)
-tup2 = (42.223068, -76.654888)
+tup1 = ( , )
+tup2 = ( , )
 
 print calculate_initial_compass_bearing(tup1, tup2)
