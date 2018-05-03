@@ -37,7 +37,7 @@ def Lturn():
     RPL.servoWrite(7, 1550)
     print "Turning Left"
 
-print calculate_initial_compass_bearing(tup1, tup2)
+print "Your bearing is: " calculate_initial_compass_bearing(tup1, tup2)
 
 while True:
     go_right = False
