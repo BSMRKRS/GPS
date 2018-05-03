@@ -48,7 +48,7 @@ while True:
     if calculate_initial_compass_bearing < 180:
         go_left = True
 
-if go_right:
-    Rturn()
-elif go_left:
-    Lturn()
+    if go_right:
+        Rturn()
+    elif go_left:
+        Lturn()
