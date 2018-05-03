@@ -38,15 +38,15 @@ def Lturn():
 print calculate_initial_compass_bearing(tup1, tup2)
 
 while True:
-    Right = False
-    Left = False
+    go_right = False
+    go_left = False
 
     if calculate_initial_compass_bearing > 180:
-        Right = True
+        go_right = True
     if calculate_initial_compass_bearing < 180:
-        Left = True
+        go_left = True
 
-if Right:
+if go_right:
     Rturn()
-elif Left:
+elif go_left:
     Lturn()
