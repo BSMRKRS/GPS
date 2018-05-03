@@ -1,3 +1,7 @@
+import RoboPiLib as RPL
+import time
+import post_to_web as PTW
+RPL.RoboPiInit("/dev/ttyAMA0",115200)
 import math
 
 tup2 = (47.545643, -96.483100)
