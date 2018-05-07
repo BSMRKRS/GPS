@@ -27,6 +27,8 @@ def calculate_initial_compass_bearing(pointA, pointB):
 
     return compass_bearing
 
+    distance = math.sqrt( ((tup1[0]-tup2[0])**2)+((tup1[1]-tup2[1])**2) )
+
 def Rturn():
     RPL.servoWrite(7, 1550)
     RPL.servoWrite(6, 1420)
@@ -37,16 +39,3 @@ def Lturn():
     RPL.servoWrite(7, 1550)
     print "Turning Left"
 
-while True:
-    go_right = False
-    go_left = False
-
-    if calculate_initial_compass_bearing > 180:
-        go_right = True
-    if calculate_initial_compass_bearing < 180:
-        go_left = True
-
-    if go_right:
-        Rturn()
-    elif go_left:
-        Lturn()
