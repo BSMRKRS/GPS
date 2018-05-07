@@ -1,4 +1,5 @@
 import math
+
 def calculate_initial_compass_bearing(pointA, pointB):
     if (type(pointA) != tuple) or (type(pointB) != tuple):
         raise TypeError("Only tuples are supported as arguments")
@@ -21,6 +22,7 @@ def calculate_initial_compass_bearing(pointA, pointB):
 
     return compass_bearing
 
+# Place coordinate points here
 tup1 = ( , )
 tup2 = ( , )
 
