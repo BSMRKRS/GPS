@@ -1,4 +1,9 @@
+import RoboPiLib as RPL
+RPL.RoboPiInit("/dev/ttyAMA0",115200)
 import math
+
+tup1 = (44.963883, -93.351047)
+tup2 = (44.956990, -93.345725)
 
 def calculate_initial_compass_bearing(pointA, pointB):
     if (type(pointA) != tuple) or (type(pointB) != tuple):
@@ -22,8 +27,8 @@ def calculate_initial_compass_bearing(pointA, pointB):
 
     return compass_bearing
 
-# Place coordinate points here
-tup1 = ( , )
-tup2 = ( , )
+def find_distance (pointA, pointB):
+    distance = math.sqrt(((pointA[0]-pointB[0])**2)+((pointA[1]-pointB[1])**2))
 
 print calculate_initial_compass_bearing(tup1, tup2)
+print find_distance(tup1, tup2)
