@@ -34,6 +34,8 @@ def calculate_initial_compass_bearing(pointA, pointB):
 
     return compass_bearing
 
+b1 = calculate_initial_compass_bearing(tup1, tup2)
+b2 = calculate_initial_compass_bearing(tup3, tup2)
 print "Initial bearing 1 is %r" %calculate_initial_compass_bearing(tup1, tup2)
 print "Your bearing is %r" %calculate_initial_compass_bearing(tup3, tup2)
 # Bearing 1 is the point you are trying to get to
