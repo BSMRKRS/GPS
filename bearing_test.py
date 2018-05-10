@@ -40,7 +40,7 @@ print "Your bearing is %r" %calculate_initial_compass_bearing(tup3, tup2)
 
 if b2 > b1:
     print "+"
-if b2 = b1:
+if b2 == b1:
     print "0"
 if b2 < b1:
     print "-"
