@@ -31,7 +31,7 @@ def calculate_initial_compass_bearing(pointA, pointB):
     return compass_bearing
 
 dist1 = math.hypot(x2 - x1, y2 - y1)
-print dist1
+print "Distance 1 is: %r" %dist1
 
 print calculate_initial_compass_bearing(tup1, tup2)
 
@@ -52,6 +52,7 @@ def Stop():
 tup3 = (44.967861, -93.344609)
 (z1, z2) = tup3
 dist2 = math.hypot(z2 - z1, y2 - y1)   
+print "Distance 2 is: %r" %dist2
     
 new = time.time()
 while time.time() < new + 3:
