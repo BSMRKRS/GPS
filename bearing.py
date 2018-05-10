@@ -1,6 +1,7 @@
 import RoboPiLib as RPL
 RPL.RoboPiInit("/dev/ttyAMA0",115200)
 import math
+import time
 
 tup1 = (44.963883, -93.351047)
 tup2 = (44.956990, -93.345725)
