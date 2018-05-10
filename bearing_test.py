@@ -4,8 +4,9 @@ import math
 import time
 
 tup1 = (44.963883, -93.351047)
-tup2 = (44.956990, -93.345725)
-tup3 = (44.967861, -93.344609)
+tup2 = (100, 500)
+tup3 = (int(raw_input("X coorxinate: ")), int(raw_input("Y coordinate: ")))
+
 (x1, x2) = tup1
 (y1, y2) = tup2
 (z1, z2) = tup3
@@ -33,19 +34,13 @@ def calculate_initial_compass_bearing(pointA, pointB):
 
     return compass_bearing
 
-print "Bearing 1 is %r" %calculate_initial_compass_bearing(tup1, tup2)
-print "Bearinf 2 is %r" %calculate_initial_compass_bearing(tup3, tup2)
+print "Initial bearing 1 is %r" %calculate_initial_compass_bearing(tup1, tup2)
+print "Your bearing is %r" %calculate_initial_compass_bearing(tup3, tup2)
+# Bearing 1 is the point you are trying to get to
 
-def Rturn():
-    RPL.servoWrite(7, 1550)
-    RPL.servoWrite(6, 1420)
-    print "Turning Right"
-
-def Lturn():
-    RPL.servoWrite(6, 1460)
-    RPL.servoWrite(7, 1550)
-    print "Turning Left"
-def Stop():
-    RPL.servoWrite(6, 0)
-    RPL.servoWrite(7, 0)
-    print "Stopping"
+if b2 > b1:
+    print "+"
+if b2 = b1:
+    print "0"
+if b2 < b1:
+    print "-"
