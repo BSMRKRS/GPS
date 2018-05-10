@@ -63,7 +63,7 @@ if time.time() > new + 3:
     
 if dist2 < dist1:
     new1 = time.time()
-    while time.time() < new + 3:
+    while time.time() < new1 + 3:
         Rturn()
-    if time.time() > new + 3:
+    if time.time() > new1 + 3:
         Stop()
