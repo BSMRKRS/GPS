@@ -33,8 +33,9 @@ def calculate_initial_compass_bearing(pointA, pointB):
 
     return compass_bearing
 
-print calculate_initial_compass_bearing(tup1, tup2)
-print calculate_initial_compass_bearing(tup3, tup2)
+print "Bearing 1 is %r" %calculate_initial_compass_bearing(tup1, tup2)
+print "Bearinf 2 is %r" %calculate_initial_compass_bearing(tup3, tup2)
+
 def Rturn():
     RPL.servoWrite(7, 1550)
     RPL.servoWrite(6, 1420)
@@ -48,22 +49,3 @@ def Stop():
     RPL.servoWrite(6, 0)
     RPL.servoWrite(7, 0)
     print "Stopping"
-
-
-
-dist2 = math.hypot(x2 - x1, z2 - z1)   
-print "Distance 2 is: %r" %dist2
-    
-new = time.time()
-while time.time() < new + 3:
-    RPL.servoWrite(6, 1000)
-    RPL.servoWrite(7, 3000)
-if time.time() > new + 3:
-    Stop()
-    
-if dist2 > dist1:
-    new1 = time.time()
-    while time.time() < new1 + 3:
-        Rturn()
-    if time.time() > new1 + 3:
-        Stop()
