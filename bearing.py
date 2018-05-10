@@ -30,7 +30,7 @@ def calculate_initial_compass_bearing(pointA, pointB):
     return compass_bearing
 
 dist1 = math.hypot(x2 - x1, y2 - y1)
-print dist
+print dist1
 
 print calculate_initial_compass_bearing(tup1, tup2)
 
