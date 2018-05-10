@@ -53,8 +53,6 @@ new = time.time()
 while time.time() < new + 3:
     RPL.servoWrite(6, 1000)
     RPL.servoWrite(7, 1000)
-    else:
-        break
 if time.time() > new + 3:
     RPL.servoWrite(6, 0)
     RPL.servoWrite(7, 0)
@@ -70,7 +68,5 @@ if dist2 > dist1:
     new1 = time.time()
     while time.time() < new + 3:
         Rturn()
-        else:
-            break
     if time.time() > new + 3:
         Stop()
