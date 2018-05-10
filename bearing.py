@@ -4,6 +4,8 @@ import math
 
 tup1 = (44.963883, -93.351047)
 tup2 = (44.956990, -93.345725)
+(x1, x2) = tup1
+(y1, y2) = tup2
 
 def calculate_initial_compass_bearing(pointA, pointB):
     if (type(pointA) != tuple) or (type(pointB) != tuple):
@@ -27,8 +29,48 @@ def calculate_initial_compass_bearing(pointA, pointB):
 
     return compass_bearing
 
-def find_distance (pointA, pointB):
-    distance = math.sqrt(((pointA[0]-pointB[0])**2)+((pointA[1]-pointB[1])**2))
+dist1 = math.hypot(x2 - x1, y2 - y1)
+print dist
 
 print calculate_initial_compass_bearing(tup1, tup2)
-print find_distance(tup1, tup2)
+
+def Rturn():
+    RPL.servoWrite(7, 1550)
+    RPL.servoWrite(6, 1420)
+    print "Turning Right"
+
+def Lturn():
+    RPL.servoWrite(6, 1460)
+    RPL.servoWrite(7, 1550)
+    print "Turning Left"
+def Stop():
+    RPL.servoWrite(6, 0)
+    RPL.servoWrite(7, 0)
+    print "Stopping"
+
+
+new = time.time()
+while time.time() < new + 3:
+    RPL.servoWrite(6, 1000)
+    RPL.servoWrite(7, 1000)
+    else:
+        break
+if time.time() > new + 3:
+    RPL.servoWrite(6, 0)
+    RPL.servoWrite(7, 0)
+
+# Here is where you would get the readings from the GPS
+# For an example, I am going to use the point (44.967861, -93.344609),
+# which is northwest and farther away from the endpoint.
+tup3 = (44.967861, -93.344609)
+(z1, z2) = tup3
+dist2 = math.hypot(z2 - z1, y2 - y1)
+
+if dist2 > dist1:
+    new1 = time.time()
+    while time.time() < new + 3:
+        Rturn()
+        else:
+            break
+    if time.time() > new + 3:
+        Stop()
