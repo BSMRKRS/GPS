@@ -11,6 +11,7 @@ tup3 = (int(raw_input("X coorxinate: ")), int(raw_input("Y coordinate: ")))
 (y1, y2) = tup2
 (z1, z2) = tup3
 
+def robot_control(x1, x2, y1, y2, b2):
 
 def calculate_initial_compass_bearing(pointA, pointB):
     if (type(pointA) != tuple) or (type(pointB) != tuple):
