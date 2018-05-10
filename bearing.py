@@ -57,7 +57,7 @@ while time.time() < new + 3:
 if time.time() > new + 3:
     RPL.servoWrite(6, 0)
     RPL.servoWrite(7, 0)
-    break
+    
 
 # Here is where you would get the readings from the GPS
 # For an example, I am going to use the point (44.967861, -93.344609),
