@@ -5,8 +5,11 @@ import time
 
 tup1 = (44.963883, -93.351047)
 tup2 = (44.956990, -93.345725)
+tup3 = (44.967861, -93.344609)
 (x1, x2) = tup1
 (y1, y2) = tup2
+(z1, z2) = tup3
+
 
 def calculate_initial_compass_bearing(pointA, pointB):
     if (type(pointA) != tuple) or (type(pointB) != tuple):
@@ -30,11 +33,8 @@ def calculate_initial_compass_bearing(pointA, pointB):
 
     return compass_bearing
 
-dist1 = math.hypot(x2 - x1, y2 - y1)
-print "Distance 1 is: %r" %dist1
-
 print calculate_initial_compass_bearing(tup1, tup2)
-
+print calculate_initial_compass_bearing(tup3, tup2)
 def Rturn():
     RPL.servoWrite(7, 1550)
     RPL.servoWrite(6, 1420)
@@ -49,8 +49,8 @@ def Stop():
     RPL.servoWrite(7, 0)
     print "Stopping"
 
-tup3 = (44.967861, -93.344609)
-(z1, z2) = tup3
+
+
 dist2 = math.hypot(x2 - x1, z2 - z1)   
 print "Distance 2 is: %r" %dist2
     
