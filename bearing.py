@@ -49,23 +49,17 @@ def Stop():
     RPL.servoWrite(7, 0)
     print "Stopping"
 
-
+tup3 = (44.967861, -93.344609)
+(z1, z2) = tup3
+dist2 = math.hypot(z2 - z1, y2 - y1)   
+    
 new = time.time()
 while time.time() < new + 3:
     RPL.servoWrite(6, 1000)
     RPL.servoWrite(7, 3000)
 if time.time() > new + 3:
-    RPL.servoWrite(6, 0)
-    RPL.servoWrite(7, 0)
+    Stop()
     
-
-# Here is where you would get the readings from the GPS
-# For an example, I am going to use the point (44.967861, -93.344609),
-# which is northwest and farther away from the endpoint.
-tup3 = (44.967861, -93.344609)
-(z1, z2) = tup3
-dist2 = math.hypot(z2 - z1, y2 - y1)
-
 if dist2 > dist1:
     new1 = time.time()
     while time.time() < new + 3:
