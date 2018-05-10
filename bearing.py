@@ -53,7 +53,7 @@ def Stop():
 new = time.time()
 while time.time() < new + 3:
     RPL.servoWrite(6, 1000)
-    RPL.servoWrite(7, 1000)
+    RPL.servoWrite(7, 3000)
 if time.time() > new + 3:
     RPL.servoWrite(6, 0)
     RPL.servoWrite(7, 0)
