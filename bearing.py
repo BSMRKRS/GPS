@@ -36,6 +36,7 @@ def robot_control(x1, y1, x2, y2, b1):
 
 f = open('bearing-output.txt', 'w')
 
+# All of these numbers are just for testing. They will be replaced with GPS coordinates and a compass bearing
 print robot_control(100, 400, 200, 100, 180)
 
 if robot_control(100, 400, 200, 100, 180) == "+":
