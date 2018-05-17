@@ -1,5 +1,5 @@
 ### Tasks: 
-- [x] Write a code to find the bearing between 2 coordinare points.
+- [x] Write a code to find the bearing between 2 coordinate points.
 - [X] Implement that as True/False.
 - [X] Translate the True/False into Right/Left.
 - [ ] Write the output to a text file that can be overwritten. 
