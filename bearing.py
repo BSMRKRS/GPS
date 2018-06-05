@@ -28,11 +28,11 @@ def robot_control(x1, y1, x2, y2, b1):
         return compass_bearing
     b2 = calculate_initial_compass_bearing(tup1, tup2)
     if b2 > b1:
-        return '+'
+        return '-'
     if b2 == b1:
         return '0'
     if b2 < b1:
-        return '-'
+        return '+'
 
 f = open('bearing-output.txt', 'w')
 
