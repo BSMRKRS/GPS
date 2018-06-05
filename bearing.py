@@ -1,6 +1,8 @@
 import math
 import time
 
+# b1 is the first bearing between the robot's initial point and the final point.
+# x2, y2 is the coordinate for the final point. 
 
 def robot_control(x1, y1, x2, y2, b1):
     tup1 = (x1, y1)
